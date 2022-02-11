@@ -1,0 +1,71 @@
+###
+
+# curl --location --request POST 'http://localhost:8080/api/register'
+# --data '{ "email": "new_user%40mail.com", "password": "your_pass" }'
+# --header 'Content-Type: application/json'
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+  "email": "new_user@mail.com",
+  "password": "your_pass"
+}
+
+###
+
+# curl --location --request POST 'http://localhost:8080/api/login'
+# --data '{ "email": "new_user%40mail.com", "password": "your_pass" }'
+# --header 'Content-Type: application/json'
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "email": "new_user@mail.com",
+  "password": "your_pass"
+}
+
+###
+
+# curl --location --request POST 'http://localhost:8080/api/notes'
+# --header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA'
+# --data '{ "title": "the title", "note" : "a note" }'
+# --header 'Content-Type: application/json'
+POST http://localhost:8080/api/notes
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA
+Content-Type: application/json
+
+{
+  "title": "the title",
+  "note": "a note"
+}
+
+###
+
+# curl --location --request GET 'http://localhost:8080/api/notes'
+# --header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA'
+GET http://localhost:8080/api/notes
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA
+
+###
+
+# curl --location --request PUT 'PUT http://localhost:8080/api/notes/1'
+# --header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA'
+# --data '{ "title": "updated title", "note" : "updated note" }'
+# --header 'Content-Type: application/json'
+PUT http://localhost:8080/api/notes/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA
+Content-Type: application/json
+
+{
+  "title": "updated title",
+  "note": "updated note"
+}
+
+###
+
+# curl --location --request DELETE 'http://localhost:8080/api/notes/1'
+# --header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA'
+DELETE http://localhost:8080/api/notes/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MUBtYWlsLmNvbSIsImV4cCI6MTY0NDYzMDU1MSwiaWF0IjoxNjQ0NTQ0MTUxfQ.-N9zX9yCQ3aKgCAT8VYTHt4b9TETN-ObFh8ohBaQ1C0V5roEDWjoNXwWS0C6uyRoRGK4YV9qhZTlenQXpn9EtA
+
+###
